@@ -13,8 +13,13 @@ int main()
         c[i] = temp;
     }
 
-    vector<int> dp(x+1, 0);
-    dp[0] = 1;
+    vector<int> dp(n+1, x+1);
+    for(int i=0;i<=n;i++){
+        for(intj=0;j<=x;j++){
+            dp[i][j]=0;
+        }
+    }
+    dp[0][0] = 1;
     int mod = 1e9+7;
 
     for(int i=0; i<n; i++) {
